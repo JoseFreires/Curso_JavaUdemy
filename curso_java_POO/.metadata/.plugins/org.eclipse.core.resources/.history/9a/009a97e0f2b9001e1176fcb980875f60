@@ -1,0 +1,12 @@
+package entities;
+
+public class PessoaFisica extends Contribuintes{
+	private Double gastoSaude;
+
+	public PessoaFisica() {
+		super();
+	}
+	
+	
+
+}

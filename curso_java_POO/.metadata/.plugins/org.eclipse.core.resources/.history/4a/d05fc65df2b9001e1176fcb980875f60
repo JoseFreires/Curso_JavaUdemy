@@ -1,0 +1,9 @@
+package entities;
+
+public abstract class Taxpayer {
+
+	public Taxpayer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

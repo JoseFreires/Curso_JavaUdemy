@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.print("Deseja começar a calculadora? SIM(S) NÃO(N)");
+		char resposta = sc.next().charAt(0);
+		
+		String operacao;
+		double resultado;
+		
+		if (resposta == 'S' || resposta == 'N') {
+			while (resposta == 'S') {
+				double x = sc.nextDouble();
+				double y = sc.nextDouble();
+				
+				System.out.print("Qual operação deseja fazer?(+)(-)(%)(*)");
+				operacao = sc.next();
+				System.out.println(operacao);
+				
+				
+					switch (operacao) {
+						case "+" :
+							resultado = x + y;
+							System.out.println(resultado);
+							break;
+						case "-" :
+							resultado = x - y;
+							System.out.println(resultado);
+							break;
+						case "*" :
+							resultado = x * y;
+							System.out.println(resultado);
+							break;
+						case "/" :
+							resultado = x / y;
+							System.out.println(resultado);
+							break;
+						default :
+							System.out.println("Nenhuma opção foi selecionada");
+							
+					}
+				
+				System.out.print("Deseja continuar a calculadora? SIM(S) NÃO(N)");
+				resposta = sc.next().charAt(0);
+			}
+			
+		} else {
+			System.out.println("Nenhuma resposta válida.");
+		}
+		
+		
+		sc.close();
+		
+	}
+
+}

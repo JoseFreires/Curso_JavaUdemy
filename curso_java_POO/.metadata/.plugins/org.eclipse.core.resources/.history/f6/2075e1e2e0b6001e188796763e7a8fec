@@ -1,0 +1,15 @@
+package aplication;
+
+import entities.Account;
+import entities.BusinessAcount;
+import entities.SavingsAccount;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Account acc1 = new Account()
+
+	}
+
+}
