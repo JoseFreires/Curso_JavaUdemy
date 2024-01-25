@@ -1,9 +1,0 @@
-package entities;
-
-public abstract class Contribuintes {
-
-	public Contribuintes() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
