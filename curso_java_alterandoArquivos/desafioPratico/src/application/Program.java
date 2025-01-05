@@ -15,6 +15,8 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program {
@@ -30,31 +32,52 @@ public class Program {
 		
 		try(BufferedReader br = new BufferedReader(new FileReader(inPath))){
 			
+			List<List> listOfList = new ArrayList<>();
 			String line = br.readLine();
 			
 			while(line != null) {
-				String[] listItens = line.split("[;]");
-				String valueTotal = listItens[1].replace(",", ".");
-				Double newTotal = Double.valueOf(valueTotal) * Double.valueOf(listItens[2]);
-				System.out.println(listItens[0] +  newTotal);
+				List<String> listItensArray = new ArrayList<>();
+				String[] listItensVector = line.split(";");
+				String valueTotal = listItensVector[1].replace(",", ".");
+				Double newTotal = Double.valueOf(valueTotal) * Double.valueOf(listItensVector[2]);
 				
-				try (BufferedWriter bw = new BufferedWriter(new FileWriter(outPath))){
-					for(String item : listItens) {
-						bw.write(item);
-						bw.newLine();
-					}
+				
+				for(int item = 0; item < listItensVector.length; item++) {
+					String teste = listItensVector[item];
+					listItensArray.add(teste);
 				}
 				
+				listItensArray.remove(1);
+				listItensArray.remove(1);
+				listItensArray.add(newTotal.toString());
+				
+				listOfList.add(listItensArray);
 				
 				line = br.readLine();
+				
+				
+				
 			}
 			
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter(outPath))){
+				for(List list : listOfList) {
+					for(Object item : list) {
+						bw.write(item.toString());
+						bw.write(";");
+					}	
+					bw.newLine();
+				}
+			}
+
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 		
+		
+		
+		System.out.print("Terminou!");
 		sc.close();
 	}
 
