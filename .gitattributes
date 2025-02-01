@@ -1,2 +1,1 @@
-/.metadata/* linguist-vendored
-/.metadata/.plugins/* linguist-vendored
+*.js linguist-language=Java
