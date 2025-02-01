@@ -1,2 +1,2 @@
-.metadata/* linguist-vendored
-.metadata/.plugins/* linguist-vendored
+/.metadata/* linguist-vendored
+/.metadata/.plugins/* linguist-vendored
