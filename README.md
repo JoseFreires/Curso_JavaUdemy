@@ -1,6 +1,10 @@
-# Curso de Java da Udemy
+<h1 align="center">
+--- Curso de Java da Udemy ---
+</h1>
 
-
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/8bd31da4-56d2-4ac5-9139-db14f1b0e9af" style="width: 350px"  />
+</p>
 
 <p>Neste repositório coloquei todas as aulas e exercícios que fiz durante meu curso de Java da plataforma Udemy. A seguir vou falar de cada assunto que foi tratado durante o curso. 
 <br> 
